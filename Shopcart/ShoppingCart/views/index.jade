@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1= title
+  br
+  #content
+    #shopping-cart-counter
+      span ShoppingCart
+      br
+    #product-list
+      table
+        thead
+          th Product Name
+          th Price
+          th Stock Amount
+          th Action
+        tbody
+
+    #shopping-cart
+      #shopping-cart-items
+        table
+          thead
+            th Product Name
+            th Action
+          tbody
