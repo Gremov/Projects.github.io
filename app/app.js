@@ -8,12 +8,10 @@ var bodyParser = require('body-parser');
 // Database
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/ShoppingCart');
-// var db = monk('process.env.PORT/ShoppingCart');
+var db = monk('localhost:27017/app');
 
 var routes = require('./routes/index');
 var products = require('./routes/products');
-var shoppingcart = require('./routes/shoppingcart');
 
 var app = express();
 
@@ -36,7 +34,6 @@ app.use(function(req,res,next){
 
 app.use('/', routes);
 app.use('/products', products);
-app.use('/shoppingcart', shoppingcart);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -68,7 +65,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
-// app.listen(3000);
 
 module.exports = app;

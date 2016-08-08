@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  h1= title
+  br
+  #container
+    #product-list
+      table
+        thead
+          th Product Name
+          th Price
+          th Stock Amount
+          th Delete?
+        tbody
+
+    // ADD Product
+    #addProductPanel
+      h2 Add Product
+      #addProduct
+        fieldset
+          input#inputProductName(type='text', placeholder='Product Name')
+          input#inputProductPrice(type='text', placeholder='Price')
+          input#inputProductStockAmount(type='text', placeholder='Stock Amount')
+          br
+          button#btnAddProduct Add Product
+
+    // UPDATE Product
+    #updateProductPanel
+      h2 Update Product
+      #updateProduct
+        fieldset
+          input#updateProductName(type='text', placeholder='Product Name')
+          input#updateProductPrice(type='text', placeholder='Price')
+          input#updateProductStockAmount(type='text', placeholder='Stock Amount')
+          br
+          button#btnUpdateProduct Update Product
