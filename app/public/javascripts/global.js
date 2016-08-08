@@ -127,7 +127,6 @@ function changeProductInfo(event) {
     $('#updateProduct').attr('rel',thisProductObject._id);
 };
 
-
 // PUT to updateproduct
 
 function updateProduct(event){
